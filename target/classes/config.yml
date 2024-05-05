@@ -1,0 +1,39 @@
+# Anti-cheat-innstillinger
+anti-cheat:
+  max-movement-violations: 5 # Maksimalt antall bevegelsesbrudd før spilleren blir sparket
+  max-other-violations: 5 # Maksimalt antall andre brudd før spilleren blir sparket
+  check-movement: true # Aktiver/deaktiver overvåkning av spillerbevegelser
+  check-other-activity: true # Aktiver/deaktiver overvåkning av annen spilleraktivitet
+
+# Meldinger
+messages:
+  player-block: "&cDu er blokkert av brannmuren grunnet mistenkelig aktivitet." # Melding når en spiller blir sparket
+  player-warning: "&eDu har utført en handling som er blokkert av brannmuren." # Advarsel til spilleren
+
+# Varsling av administratorer
+notify-admins-block-player: true # Varsle administratorer når en spiller blir sparket
+notify-admins-block-ip: true # Varsle administratorer når en IP-adresse blir blokkert
+
+# Blokkerte IP-er og porter
+blocked-ips: [] # Liste over blokkerte IP-adresser
+blocked-ports: [] # Liste over blokkerte porter
+
+# Blokkerte kommandoer
+blocked-commands: [] # Liste over blokkerte kommandoer
+
+# Hvitelisting
+whitelist:
+  enable-ip-whitelist: false # Aktiver/deaktiver IP-hvitelisting
+  ip-addresses: [] # Liste over hvitelistede IP-adresser
+  enable-command-whitelist: false # Aktiver/deaktiver kommando-hvitelisting
+  commands: [] # Liste over hvitelistede kommandoer
+
+# Tidsinnstillinger
+command-cooldown: 1000 # Nedkjølingstid for kommandoer (i millisekunder)
+movement-cooldown: 500 # Nedkjølingstid for bevegelser (i millisekunder)
+packet-cooldown: 100 # Nedkjølingstid for pakker (i millisekunder)
+
+# Maksimalt antall brudd
+max-command-violations: 10 # Maksimalt antall kommandobrudd før spilleren blir sparket
+max-packet-violations: 100 # Maksimalt antall pakkebrudd før spilleren blir sparket
+max-packets-per-ip: 500 # Maksimalt antall pakker per IP-adresse før det anses som et DDoS-angrep

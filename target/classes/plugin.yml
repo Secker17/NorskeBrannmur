@@ -1,0 +1,31 @@
+name: NorskeBrannmur
+version: 1.0
+main: no.example.norskebranmur.NorskeBrannmur
+api-version: 1.13
+description: En plugin for å administrere sikkerhet og banning på tvers av Minecraft-servere med støtte for MongoDB.
+
+commands:
+  brannmur:
+    description: Administrer brannmursfunksjoner.
+    usage: /<command> <args>
+    aliases: [firewall, fm]
+    permission: norskebranmur.use
+    permission-message: Du har ikke tillatelse til å bruke denne kommandoen.
+  nbalert:
+    description: Send en global varsling til alle admins.
+    usage: /<command> <melding>
+    permission: norskebranmur.notify
+    permission-message: Du har ikke tillatelse til å sende varsler.
+  spiller:
+    description: Legger til en spiller i databasen.
+    usage: /<command> <navn>
+    permission: norskebranmur.admin
+    permission-message: Du har ikke tillatelse til å legge til spillere i databasen.
+
+permissions:
+  norskebranmur.use:
+    description: Tillater bruk av brannmurskommandoene.
+    default: op
+  norskebranmur.notify:
+    description: Tillater sending av varsler til admins.
+    default: op
